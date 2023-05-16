@@ -29,3 +29,17 @@ document.getElementById('buttons').addEventListener('click', function(event){
         calDisplay.value = updateNum;
     }
 })
+const notMatch = document.getElementById('not_match');
+const match = document.getElementById('match');
+function getMatch(){
+    const pinDisplay = document.getElementById('pin_display').value;
+    const calDisplay = document.getElementById('cal_display').value;
+    if(pinDisplay==calDisplay){
+        match.style.display = 'block';
+        notMatch.style.display = 'none';
+    }
+    else{
+        notMatch.style.display = 'block';
+        match.style.display = 'none';
+    }
+}
